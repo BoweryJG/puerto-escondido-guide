@@ -40,7 +40,7 @@ export default function Home() {
       color: 'from-[#E91E63] to-[#6A1B9A]',
       borderColor: 'border-[#E91E63]',
       shadowColor: 'card-shadow-pink',
-      count: '3 locations',
+      count: '9 locations',
       emoji: '🧘'
     },
     {
@@ -52,7 +52,7 @@ export default function Home() {
       color: 'from-[#6A1B9A] to-[#00B4D8]',
       borderColor: 'border-[#6A1B9A]',
       shadowColor: 'card-shadow-pink',
-      count: '4 experiences',
+      count: '11 experiences',
       emoji: '✨'
     },
     {
@@ -204,7 +204,7 @@ export default function Home() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: 0.6 }}
             >
-              <div className="text-5xl md:text-6xl font-bold mb-2">30+</div>
+              <div className="text-5xl md:text-6xl font-bold mb-2">50+</div>
               <div className="text-xl opacity-90">Curated Locations</div>
               <div className="text-sm opacity-75">Handpicked for you</div>
             </motion.div>

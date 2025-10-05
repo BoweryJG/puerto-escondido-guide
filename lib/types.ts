@@ -25,7 +25,16 @@ export type Tag =
   | 'retreat'
   | 'wellness'
   | 'ceviche'
-  | 'seafood';
+  | 'seafood'
+  | 'sound-healing'
+  | 'holistic'
+  | 'food-tour'
+  | 'coffee'
+  | 'eco-tour'
+  | 'photography'
+  | 'chocolate'
+  | 'beach'
+  | 'dining';
 
 export interface Location {
   id: string;

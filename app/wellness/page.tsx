@@ -1,28 +1,77 @@
+'use client';
+
 import { locations } from '@/data/locations';
 import LocationCard from '@/components/LocationCard';
-import { Heart } from 'lucide-react';
+import { Heart, Flower2, Sparkles } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 export default function WellnessPage() {
   const wellness = locations.filter(loc => loc.category === 'wellness');
 
   return (
     <div className="min-h-screen pb-20 md:pb-8">
-      <div className="bg-rose-700 text-white py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center gap-3 mb-4">
-            <Heart size={40} />
-            <h1 className="text-4xl font-bold">Wellness & Yoga</h1>
-          </div>
-          <p className="text-rose-100 text-lg">
-            Yoga retreats, wellness centers, and holistic experiences
-          </p>
+      {/* Vibrant Hero Section */}
+      <div className="bg-gradient-to-r from-[#E91E63] to-[#6A1B9A] text-white py-16 relative overflow-hidden">
+        {/* Floating decorative elements */}
+        <div className="absolute top-10 right-10 opacity-20 float-animation">
+          <Heart size={80} />
+        </div>
+        <div className="absolute bottom-10 left-10 opacity-20 float-animation" style={{ animationDelay: '1s' }}>
+          <Flower2 size={60} />
+        </div>
+        <div className="absolute top-1/2 right-1/4 opacity-20 float-animation" style={{ animationDelay: '2s' }}>
+          <Sparkles size={70} />
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <div className="flex items-center gap-3 mb-4">
+              <div className="p-4 bg-white/20 backdrop-blur-sm rounded-2xl">
+                <Heart size={48} />
+              </div>
+              <div>
+                <h1 className="text-5xl md:text-6xl font-bold" style={{ fontFamily: 'var(--font-pacifico)' }}>
+                  Bienestar & Yoga 🧘
+                </h1>
+                <p className="text-2xl text-pink-100 mt-1">Wellness & Yoga</p>
+              </div>
+            </div>
+            <p className="text-xl text-pink-50 mt-4 max-w-3xl">
+              Yoga retreats, wellness centers, and holistic experiences.
+              Nurture your body, mind, and spirit in paradise! 🌺✨🙏
+            </p>
+          </motion.div>
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          {wellness.map(location => (
-            <LocationCard key={location.id} location={location} />
+      {/* Content Section */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="mb-8"
+        >
+          <h2 className="text-3xl font-bold mb-2">
+            <span className="gradient-text">{wellness.length} Transformative Wellness Spaces</span>
+          </h2>
+          <p className="text-gray-600 text-lg">From ocean-view yoga to traditional temazcal ceremonies</p>
+        </motion.div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          {wellness.map((location, index) => (
+            <motion.div
+              key={location.id}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+            >
+              <LocationCard location={location} />
+            </motion.div>
           ))}
         </div>
       </div>

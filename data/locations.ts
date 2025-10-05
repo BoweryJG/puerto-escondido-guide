@@ -385,6 +385,113 @@ export const locations: Location[] = [
     ],
     jenniferNote: 'Excellent for understanding holistic wellness approaches and juice cleanse protocols.'
   },
+  {
+    id: 'marea-yoga-studio',
+    name: 'Marea Yoga Studio',
+    category: 'wellness',
+    description: 'Stunning ocean-view yoga studio specializing in sunrise and sunset sessions. Offers hatha, vinyasa, power flow, yin, aerial yoga, acro yoga, kundalini, meditation, and kids yoga. Harnesses natural energy transitions of the day.',
+    address: 'Puerto Escondido (oceanfront)',
+    website: 'https://www.mareayogastudio.com/',
+    priceRange: '$$',
+    tags: ['yoga', 'wellness'],
+    highlights: [
+      'Ocean views',
+      'Sunrise & sunset sessions',
+      'Multiple yoga styles',
+      'Aerial yoga',
+      'Kids yoga classes',
+      'Meditation & pranayama'
+    ],
+    jenniferNote: 'Perfect for experiencing different yoga modalities in a breathtaking setting. Great for understanding mind-body practices.'
+  },
+  {
+    id: 'vida-yoga-center',
+    name: 'Vida Yoga Center',
+    category: 'wellness',
+    description: 'Comprehensive yoga center offering daily classes, wellness retreats, and yoga teacher training programs. Community-focused with experienced instructors.',
+    address: 'Puerto Escondido',
+    website: 'https://www.vidayogacenter.com/',
+    priceRange: '$$',
+    tags: ['yoga', 'wellness', 'retreat'],
+    highlights: [
+      'Daily yoga classes',
+      'Wellness retreats',
+      'Teacher training programs',
+      'Experienced instructors',
+      'Community atmosphere'
+    ],
+    jenniferNote: 'Great for deepening yoga practice or exploring teacher training. Strong community of wellness practitioners.'
+  },
+  {
+    id: 'suave-studio',
+    name: 'Suave Studio - Yoga & Wellness Center',
+    category: 'wellness',
+    description: 'Modern yoga and wellness center offering variety of classes and holistic therapies in a peaceful setting.',
+    address: 'Puerto Escondido',
+    instagram: '@suave__studio',
+    priceRange: '$$',
+    tags: ['yoga', 'wellness'],
+    highlights: [
+      'Variety of yoga styles',
+      'Wellness therapies',
+      'Modern facilities',
+      'Peaceful atmosphere'
+    ]
+  },
+  {
+    id: 'go-with-flo',
+    name: 'Go With The Flo - Wellness Therapy',
+    category: 'wellness',
+    description: 'Flo is a wellness therapist offering yoga, sound healing, and spiritual ceremonies including cacao ceremonies. Personalized approach to feeling better in body and mind.',
+    address: 'Puerto Escondido',
+    website: 'https://gowiththeflo-yoga.com/',
+    priceRange: '$$',
+    tags: ['yoga', 'wellness', 'sound-healing'],
+    highlights: [
+      'Yoga sessions',
+      'Sound healing',
+      'Cacao ceremonies',
+      'Spiritual practices',
+      'Personalized wellness'
+    ],
+    jenniferNote: 'Unique approach combining traditional and spiritual wellness practices. Great for exploring alternative healing modalities.'
+  },
+  {
+    id: 'enforma-wellness',
+    name: 'EnForma Wellness Hub',
+    category: 'wellness',
+    description: 'Comprehensive wellness directory connecting you to gyms, yoga studios, sound baths, Reiki, shamanic healing, breathwork, and integrative medicine in Puerto Escondido.',
+    address: 'Multiple locations',
+    website: 'https://puertoescondido.enformawellness.com/',
+    priceRange: '$$',
+    tags: ['wellness', 'holistic'],
+    highlights: [
+      'Wide range of wellness services',
+      'Shamanic healing',
+      'Breathwork sessions',
+      'Reiki treatments',
+      'Sound baths',
+      'Integrative medicine'
+    ],
+    jenniferNote: 'Excellent resource for discovering various holistic practitioners and wellness modalities in one place.'
+  },
+  {
+    id: 'temazcal-ceremonies',
+    name: 'Traditional Temazcal Ceremonies',
+    category: 'wellness',
+    description: 'Authentic traditional Mexican sweat lodge ceremonies for purification, healing, and spiritual connection. Led by experienced facilitators.',
+    address: 'Various locations in Puerto Escondido',
+    priceRange: '$$',
+    tags: ['wellness', 'traditional', 'holistic'],
+    highlights: [
+      'Traditional sweat lodge',
+      'Purification ceremony',
+      'Spiritual healing',
+      'Authentic Mexican tradition',
+      'Experienced guides'
+    ],
+    jenniferNote: 'Important cultural wellness practice. Excellent for understanding traditional Mexican healing ceremonies and their therapeutic benefits.'
+  },
 
   // EXPERIENCES
   {
@@ -454,5 +561,127 @@ export const locations: Location[] = [
       'Cooking classes',
       'Food tours'
     ]
+  },
+  {
+    id: 'puerto-food-tours',
+    name: 'Puerto Food Tours',
+    category: 'experience',
+    description: 'Delicious culinary walking tours supporting family-run local businesses. Meet the proud people behind your food, hear fascinating stories, and taste antique recipes on insider experiences.',
+    address: 'Multiple locations in Puerto Escondido',
+    website: 'https://www.puertofoodtours.com/',
+    priceRange: '$$$',
+    tags: ['food-tour', 'local', 'traditional'],
+    highlights: [
+      'Support local family businesses',
+      'Traditional recipes',
+      'Food storytelling',
+      'Walking tours',
+      'Insider access to vendors'
+    ],
+    jenniferNote: 'Perfect for understanding local food culture and meeting artisanal food producers. Great networking opportunity.'
+  },
+  {
+    id: 'roberts-ecotours',
+    name: 'Robert\'s Ecotours - Mezcal & Coffee Tour',
+    category: 'experience',
+    description: 'Visit a local palenque (mezcal distillery) to learn about ancestral mezcal espadín production process, followed by coffee farm tour. Taste and learn about traditional agave cultivation.',
+    address: 'Pickup in Puerto Escondido',
+    website: 'https://robertsecotours.com/tours/mezcal-and-coffe-tour/',
+    priceRange: '$$',
+    tags: ['mezcal', 'coffee', 'traditional', 'eco-tour'],
+    highlights: [
+      'Palenque distillery visit',
+      'Coffee farm tour',
+      'Ancestral production methods',
+      'Tastings included',
+      'Learn agave cultivation'
+    ],
+    jenniferNote: 'Combines two important Oaxacan agricultural products. Great for understanding traditional farming and production.'
+  },
+  {
+    id: 'oaxacan-cooking-etno',
+    name: 'Etno Food - Oaxacan Vegetarian Cooking Class',
+    category: 'experience',
+    description: 'Immersive cooking class blending culinary and cultural experiences in cozy courtyard setting. Vegetarian-focused with vegan adaptations. Learn traditional Oaxacan techniques.',
+    address: 'Oaxaca City',
+    priceRange: '$$$',
+    tags: ['cooking-class', 'vegetarian', 'traditional'],
+    highlights: [
+      'Vegetarian Oaxacan cooking',
+      'Vegan adaptations available',
+      'Cultural immersion',
+      'Cozy courtyard setting',
+      'Traditional techniques'
+    ],
+    jenniferNote: 'Excellent for learning plant-based versions of traditional Oaxacan dishes. Cultural context included.'
+  },
+  {
+    id: 'mezcal-pairing-dinner',
+    name: 'Puerto Mezcal - Pairing Dinner Experience',
+    category: 'experience',
+    description: 'Exclusive 6-course dinner paired with 6 different artisanal mezcals. From appetizers to dessert, each dish expertly paired to enhance flavors. Unique setting in Puerto Escondido\'s only mezcal distillery.',
+    address: 'Puerto Mezcal Distillery',
+    website: 'https://www.puertomezcal.mx/',
+    priceRange: '$$$$',
+    tags: ['mezcal', 'dining', 'traditional'],
+    highlights: [
+      '6-course gourmet dinner',
+      '6 mezcal pairings',
+      'Only distillery in Puerto',
+      'Magical atmosphere',
+      'Expert pairing guidance'
+    ],
+    jenniferNote: 'Upscale culinary experience showcasing mezcal\'s versatility. Great for understanding flavor profiles and traditional spirits.'
+  },
+  {
+    id: 'market-photography-tour',
+    name: 'Mercado Photography & Culture Tour',
+    category: 'experience',
+    description: 'Guided photography tour through Mercado Benito Juárez focusing on vibrant colors, traditional vendors, and local ingredients. Learn about Oaxacan food culture while capturing stunning images.',
+    address: 'Mercado Benito Juárez',
+    priceRange: '$$',
+    tags: ['photography', 'local', 'traditional'],
+    highlights: [
+      'Photography guidance',
+      'Cultural education',
+      'Meet local vendors',
+      'Learn ingredient stories',
+      'Vibrant market scenes'
+    ],
+    jenniferNote: 'Perfect for content creation and understanding traditional food systems. Great for Instagram and blog content.'
+  },
+  {
+    id: 'chocolate-workshop',
+    name: 'Traditional Oaxacan Chocolate Workshop',
+    category: 'experience',
+    description: 'Hands-on workshop learning traditional chocolate-making from cacao bean to finished chocolate. Grind on metate, mix with spices, and create your own blend to take home.',
+    address: 'Puerto Escondido',
+    priceRange: '$$',
+    tags: ['cooking-class', 'traditional', 'chocolate'],
+    highlights: [
+      'Bean-to-bar process',
+      'Traditional metate grinding',
+      'Spice blending',
+      'Take home your creation',
+      'Learn Oaxacan chocolate history'
+    ],
+    jenniferNote: 'Essential for understanding cacao as superfood and traditional preparation methods. Great hands-on experience.'
+  },
+  {
+    id: 'sunrise-beach-yoga',
+    name: 'Sunrise Beach Yoga Sessions',
+    category: 'experience',
+    description: 'Start your day with oceanfront yoga on Zicatela or La Punta beaches. Various styles offered by different instructors. Drop-in classes welcome.',
+    address: 'Zicatela & La Punta beaches',
+    priceRange: '$',
+    tags: ['yoga', 'wellness', 'beach'],
+    highlights: [
+      'Beach setting',
+      'Sunrise timing',
+      'Various yoga styles',
+      'Drop-in friendly',
+      'Ocean sounds meditation'
+    ],
+    jenniferNote: 'Accessible way to experience yoga with spectacular natural setting. Great for morning mindfulness practice.'
   }
 ];
