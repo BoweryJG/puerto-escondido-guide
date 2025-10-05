@@ -1,26 +1,231 @@
 @import "tailwindcss";
 
+/* Mexican Beach Color Palette */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Primary Mexican Colors */
+  --sunset-orange: #FF6B35;
+  --caribbean-blue: #00B4D8;
+  --hot-pink: #E91E63;
+  --warm-sand: #F4E1C1;
+  --deep-purple: #6A1B9A;
+  --bright-yellow: #FFD60A;
+  --terracotta: #D84315;
+
+  /* Complementary Colors */
+  --turquoise: #06D6A0;
+  --coral: #FF8C94;
+  --lime: #8BC34A;
+  --ocean-deep: #0077B6;
+
+  /* Neutral Beach Tones */
+  --cream: #FFF8E7;
+  --sand-light: #FFEFD5;
+  --driftwood: #8B7355;
+
+  --background: var(--cream);
+  --foreground: #2D2D2D;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+  /* Mexican Palette */
+  --color-sunset: var(--sunset-orange);
+  --color-caribbean: var(--caribbean-blue);
+  --color-magenta: var(--hot-pink);
+  --color-sand: var(--warm-sand);
+  --color-purple: var(--deep-purple);
+  --color-yellow: var(--bright-yellow);
+  --color-terracotta: var(--terracotta);
+  --color-turquoise: var(--turquoise);
+  --color-coral: var(--coral);
+  --color-ocean: var(--ocean-deep);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #1A1A2E;
+    --foreground: #EAEAEA;
+    --warm-sand: #3D3D4E;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* Beach Wave Pattern Background */
+.wave-pattern {
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='20' viewBox='0 0 100 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 10 Q 25 0, 50 10 T 100 10' fill='none' stroke='%2300B4D8' stroke-width='0.5' opacity='0.2'/%3E%3C/svg%3E");
+  background-repeat: repeat-x;
+}
+
+/* Sand Texture */
+.sand-texture {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Cfilter id='noise'%3E%3CfeTurbulence baseFrequency='0.9' numOctaves='4'/%3E%3CfeColorMatrix values='0 0 0 0 0.96 0 0 0 0 0.88 0 0 0 0 0.76 0 0 0 1 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.4'/%3E%3C/svg%3E");
+}
+
+/* Gradient Text */
+.gradient-text {
+  background: linear-gradient(135deg, var(--sunset-orange) 0%, var(--hot-pink) 50%, var(--deep-purple) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-ocean {
+  background: linear-gradient(135deg, var(--caribbean-blue) 0%, var(--turquoise) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Mexican-inspired decorative elements */
+.papel-picado-border {
+  border-image: repeating-linear-gradient(
+    45deg,
+    var(--hot-pink),
+    var(--hot-pink) 10px,
+    var(--bright-yellow) 10px,
+    var(--bright-yellow) 20px,
+    var(--caribbean-blue) 20px,
+    var(--caribbean-blue) 30px
+  ) 1;
+}
+
+/* Card Shadows with Color Tints */
+.card-shadow-pink {
+  box-shadow: 0 10px 30px -5px rgba(233, 30, 99, 0.15), 0 4px 6px -2px rgba(233, 30, 99, 0.1);
+}
+
+.card-shadow-orange {
+  box-shadow: 0 10px 30px -5px rgba(255, 107, 53, 0.15), 0 4px 6px -2px rgba(255, 107, 53, 0.1);
+}
+
+.card-shadow-blue {
+  box-shadow: 0 10px 30px -5px rgba(0, 180, 216, 0.15), 0 4px 6px -2px rgba(0, 180, 216, 0.1);
+}
+
+/* Hover lift effect */
+.hover-lift {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-lift:hover {
+  transform: translateY(-8px) scale(1.02);
+}
+
+/* Wave divider */
+.wave-divider {
+  position: relative;
+  overflow: hidden;
+}
+
+.wave-divider::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z' fill='%23F4E1C1'/%3E%3C/svg%3E") no-repeat center bottom;
+  background-size: cover;
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+.float-animation {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes wave {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.wave-animation {
+  animation: wave 20s linear infinite;
+}
+
+/* Sunset gradient backgrounds */
+.sunset-gradient {
+  background: linear-gradient(135deg,
+    #FF6B35 0%,
+    #E91E63 35%,
+    #6A1B9A 70%,
+    #00B4D8 100%
+  );
+}
+
+.ocean-gradient {
+  background: linear-gradient(180deg,
+    #00B4D8 0%,
+    #0077B6 50%,
+    #03045E 100%
+  );
+}
+
+/* Badge styles */
+.badge-new {
+  background: linear-gradient(135deg, var(--bright-yellow), var(--sunset-orange));
+  color: white;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 8px rgba(255, 107, 53, 0.3);
+}
+
+.badge-favorite {
+  background: var(--hot-pink);
+  color: white;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 8px rgba(233, 30, 99, 0.3);
+}
+
+/* Decorative underlines */
+.decorative-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.decorative-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--sunset-orange), var(--hot-pink), var(--bright-yellow));
+  border-radius: 2px;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection color */
+::selection {
+  background-color: var(--hot-pink);
+  color: white;
+}
+
+::-moz-selection {
+  background-color: var(--hot-pink);
+  color: white;
 }
