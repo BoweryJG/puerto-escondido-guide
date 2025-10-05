@@ -9,7 +9,7 @@ export default function WellnessPage() {
   const wellness = locations.filter(loc => loc.category === 'wellness');
 
   return (
-    <div className="min-h-screen pb-20 md:pb-8">
+    <div className="min-h-screen pb-8">
       {/* Vibrant Hero Section */}
       <div className="bg-gradient-to-r from-[#E91E63] to-[#6A1B9A] text-white py-16 relative overflow-hidden">
         {/* Floating decorative elements */}

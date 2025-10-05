@@ -70,7 +70,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen pb-20 md:pb-8">
+    <div className="min-h-screen pb-8">
       {/* Beach Hero Section */}
       <BeachHero />
 

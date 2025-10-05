@@ -9,7 +9,7 @@ export default function ExperiencesPage() {
   const experiences = locations.filter(loc => loc.category === 'experience');
 
   return (
-    <div className="min-h-screen pb-20 md:pb-8">
+    <div className="min-h-screen pb-8">
       {/* Vibrant Hero Section */}
       <div className="bg-gradient-to-r from-[#6A1B9A] to-[#00B4D8] text-white py-16 relative overflow-hidden">
         {/* Floating decorative elements */}

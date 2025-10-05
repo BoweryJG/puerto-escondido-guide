@@ -15,7 +15,7 @@ export default function RestaurantsPage() {
   const seafood = restaurants.filter(r => r.category === 'seafood');
 
   return (
-    <div className="min-h-screen pb-20 md:pb-8">
+    <div className="min-h-screen pb-8">
       {/* Vibrant Hero Section */}
       <div className="bg-gradient-to-r from-[#FF6B35] to-[#FF8C94] text-white py-16 relative overflow-hidden">
         {/* Floating decorative elements */}
